@@ -27,7 +27,12 @@
 	</categories>
 
 	<policies>
-		<policy name="MicroarchHardening" class="Machine" displayName="$(string.MicroarchHardening)" explainText="$(string.MicroarchHardening_Explain)" presentation="$(presentation.MicroarchHardening_Presentation)" key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+		<policy 	name="MicroarchHardening" 
+					class="Machine" 
+					displayName="$(string.MicroarchHardening)" 
+					explainText="$(string.MicroarchHardening_Explain)" 
+					presentation="$(presentation.MicroarchHardening_Presentation)" 
+					key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
 			<parentCategory ref="SpectreMeltdown" />
 			<supportedOn ref="windows:SUPPORTED_WindowsVista" />
 			<elements>
