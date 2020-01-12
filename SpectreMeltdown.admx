@@ -3,7 +3,8 @@
 	Author: Florian Stosse
 
 	Description: This template provide options to enable or disable additional protections for side-channel vulnerabilities.
-	The policies modifiy the registry values found in the Microsoft documentation available here: https://support.microsoft.com/en-us/help/4073119/protect-against-speculative-execution-side-channel-vulnerabilities-in
+	The policies modifiy the registry values found in the Microsoft documentation available here: 
+	https://support.microsoft.com/en-us/help/4073119/protect-against-speculative-execution-side-channel-vulnerabilities-in
 
 	Date: 12/01/2020
 	Licence: GNU General Public License v3.0 (https://choosealicense.com/licenses/gpl-3.0/)
@@ -27,12 +28,12 @@
 	</categories>
 
 	<policies>
-		<policy 	name="MicroarchHardening" 
-					class="Machine" 
-					displayName="$(string.MicroarchHardening)" 
-					explainText="$(string.MicroarchHardening_Explain)" 
-					presentation="$(presentation.MicroarchHardening_Presentation)" 
-					key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+		<policy name="MicroarchHardening" 
+				class="Machine" 
+				displayName="$(string.MicroarchHardening)" 
+				explainText="$(string.MicroarchHardening_Explain)" 
+				presentation="$(presentation.MicroarchHardening_Presentation)" 
+				key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
 			<parentCategory ref="SpectreMeltdown" />
 			<supportedOn ref="windows:SUPPORTED_WindowsVista" />
 			<elements>
