@@ -123,7 +123,9 @@
 						</valueList>
 					</item>
 				</enum>
-				<boolean id="HyperVMitigations" key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" valueName="MinVmVersionForCpuBasedMitigations">
+				<boolean id="HyperVMitigations" 
+							key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" 
+							valueName="MinVmVersionForCpuBasedMitigations">
 					<trueValue>
 						<string>1.0</string>
 					</trueValue>
