@@ -27,11 +27,12 @@
 			<string id="MicroarchHardening_Option5">Intel: enable mitigations for Meltdown only</string>
 			<string id="MicroarchHardening_Option6">AMD and ARM: enable mitigations for Spectre v2</string>
 			<string id="MicroarchHardening_Option7">Disable all mitigations</string>
-			<presentationTable>
-				<presentation id="MicroarchHardening_Presentation">
-					<dropdownList refId="MicroarchHardening_DropdownList" noSort="true" defaultItem="1">Select an option:</dropdownList>
-					<checkBox refId="HyperVMitigations">Enable Hyper-V mitigations for hosts</checkBox>
-				</presentation>
-			</presentationTable>
-		</resources>
-	</policyDefinitionResources>
+		</stringTable>
+		<presentationTable>
+			<presentation id="MicroarchHardening_Presentation">
+				<dropdownList refId="MicroarchHardening_DropdownList" noSort="true" defaultItem="1">Select an option:</dropdownList>
+				<checkBox refId="HyperVMitigations">Enable Hyper-V mitigations for hosts</checkBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
