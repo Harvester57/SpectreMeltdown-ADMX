@@ -9,31 +9,22 @@
 	Date: 12/01/2020
 	Licence: GNU General Public License v3.0 (https://choosealicense.com/licenses/gpl-3.0/)
 -->
-<policyDefinitions 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-					revision="1.0" schemaVersion="1.0" 
-					xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
-
+<policyDefinitions 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" 
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
 	<policyNamespaces>
 		<target prefix="spectremeltdown" namespace="Microsoft.Policies.SpectreMeltdown" />
 		<using prefix="windows" namespace="Microsoft.Policies.Windows" />
 	</policyNamespaces>
-
 	<resources minRequiredRevision="1.0" />
-
 	<categories>
 		<category name="SpectreMeltdown" displayName="$(string.SpectreMeltdown)">
 			<parentCategory ref="windows:System" />
 		</category>
 	</categories>
-
 	<policies>
-		<policy name="MicroarchHardening" 
-				class="Machine" 
-				displayName="$(string.MicroarchHardening)" 
-				explainText="$(string.MicroarchHardening_Explain)" 
-				presentation="$(presentation.MicroarchHardening_Presentation)" 
-				key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+		<policy name="MicroarchHardening" class="Machine" displayName="$(string.MicroarchHardening)" explainText="$(string.MicroarchHardening_Explain)" presentation="$(presentation.MicroarchHardening_Presentation)" key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
 			<parentCategory ref="SpectreMeltdown" />
 			<supportedOn ref="windows:SUPPORTED_WindowsVista" />
 			<elements>
@@ -123,9 +114,7 @@
 						</valueList>
 					</item>
 				</enum>
-				<boolean id="HyperVMitigations" 
-							key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" 
-							valueName="MinVmVersionForCpuBasedMitigations">
+				<boolean id="HyperVMitigations" key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" valueName="MinVmVersionForCpuBasedMitigations">
 					<trueValue>
 						<string>1.0</string>
 					</trueValue>
